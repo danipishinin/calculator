@@ -6,9 +6,7 @@ export default (props) => (
     onClick={(e) => props.click && props.click(e.label)}
     className={`
     button
-    ${props.operation ? "operation" : ""}
-    ${props.double ? "double" : ""}
-    ${props.triple ? "triple" : ""}
+    ${props.style}
 `}
   >
     {props.label}

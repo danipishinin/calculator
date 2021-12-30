@@ -16,19 +16,20 @@
     background-color: #ccc;
 }
 
-.button.double {
-    grid-column: span 2;
+.col4 {
+    grid-row: span 4;
+    background: #c58000;
 }
 
-.button.triple {
-    grid-column: span 3;
+.col4:active {
+    background: #faB231cc;
 }
 
-.button.operation {
-    background-color: #faB231;
-    background-color: #fff;
+
+.operation {
+    background-color: #c2bfbf;
 }
 
-.button.operation:active {
-    background-color: #faB231cc;
+.operation:active {
+    background-color: #c9c9c9;
 }

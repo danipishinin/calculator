@@ -6,31 +6,28 @@ import CalculatorConsts from "../common/consts/calculator.consts";
 import Button from "../components/Button/Button";
 import Display from "../components/Display/Display";
 
+const initialState = {
+  displayValue: "0",
+  clearDisplay: false,
+  operation: null,
+  values: [0, 0],
+  current: 0,
+};
 export default class Calculator extends Component {
-  setNumber(d) {
-    console.log(d)
-  }
-
-  setOperator(op) {
-    console.log(op)
-  }
-
-  clearMemory() {
-    
-  }
-
+  state = { ...initialState };
   render() {
-
     const { buttons } = CalculatorConsts();
 
     const RenderButtons = () =>
-      buttons.map((item) => {
-        return <Button label={item} />;
+      buttons.map((item, index) => {
+        return (
+          <Button key={item.index} label={item.label} style={item.class} />
+        );
       });
 
     return (
       <div className='calculator'>
-        <Display value={100} />
+        <Display value={this.displayValue} />
         <RenderButtons />
       </div>
     );
