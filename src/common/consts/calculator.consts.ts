@@ -14,11 +14,11 @@ const CalculatorConsts = () => {
       class: "operation",
     },
     {
-      label: "x",
+      label: "*",
       class: "operation",
     },
     {
-      label: "÷",
+      label: "/",
       class: "operation",
     },
     {
