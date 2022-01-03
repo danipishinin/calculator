@@ -19,16 +19,6 @@ export default class Calculator extends Component {
 
   calcular(label) {
     console.log('CALCULAR')
-    const botao = label.trim();
-    if (botao === "AC") return this.clear;
-    else if (botao !== "=") {
-      this.state.displayValue = this.state.displayValue + botao;
-      console.log(this.state.displayValue)
-    }
-    else {
-      console.log(this.state.displayValue)
-      eval(this.state.displayValue)
-    }
   }
   render() {
     const { buttons } = CalculatorConsts();
@@ -41,7 +31,7 @@ export default class Calculator extends Component {
             key={index}
             label={item.label}
             style={item.class}
-            onClick={() => this.calcular}
+            onClick={() => this.calcular(item.label)}
           />
         );
       });
