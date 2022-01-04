@@ -3,7 +3,7 @@ import "./Button.css";
 
 export default (props) => (
   <button
-    onClick={(e) => props.click && props.click(e.label)}
+    onClick={(e) => props.onClick && props.onClick(e.label)}
     className={`
     button
     ${props.style}
